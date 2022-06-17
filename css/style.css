@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'white_penregular';
+    src: url('white_pen-webfont.woff2') format('woff2'),
+         url('white_pen-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(#ca615e 10%, #B24945);
+    color: black;
+    height: 90px;
+}
+
+.borderNavBottom {
+    background-color: #ecc380;
+    width: 100%;
+    height: 8px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.bOneContainerLogo {
+    font-family: 'white_penregular';
+    font-size: 5rem;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.bOneContainerMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Comic Sans MS',Arial;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.aboutMe{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 40px;
+    transition: transform 400ms;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: transform 400ms;
+}
+
+.aboutMe:hover {
+    border-top: 3px solid black;
+}
+.contact:hover {
+    border-top: 3px solid black;
+}
+
+/* projet déffilant */
+
+.bAllContainerProject {
+    display: flex;
+    flex-direction: row;
+    background: radial-gradient( #e6d0ae 60%,#E7C897);
+    width: 100%;
+    height: 733px;
+}
+
+.placementProject {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2.6;
+}
+
+.image:not(.active) {
+    display: none;
+}
+.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 800px;
+    height:392px;
+    box-shadow: 6px 6px 5px #967541;
+    border-radius: 40px;
+    opacity: 0;
+    animation: displayProject 300ms 200ms ease-in-out both;
+}
+
+@keyframes displayProject {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.active:hover {
+    transform: translateX(-30px);
+    transition: 500ms ease 0s;
+}
+
+.image {
+    width: 800px;
+    height: 392px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -35%;
+    background: #ecc380;
+    box-shadow: 6px 6px 5px #967541;
+    font-family: 'Comic Sans MS',Arial;
+    opacity: 0;
+    border-radius: 20px;
+    width: 390px;
+}
+
+.situation {
+    width: 88%;
+    margin: 10px;
+    text-align: justify;
+}
+
+.text {
+
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.text > h1,p{
+    padding-bottom: 5px;
+}
+
+
+.text > ul{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.text > ul > li {
+    margin: 10px;
+}
+
+.active:hover .text-container{
+    animation: showText 400ms 0s ease-in both;
+}
+
+h3{
+    font-size: 1.15rem;
+    padding-bottom: 10px;
+}
+
+
+
+@keyframes showText {
+    0% {
+        visibility: visible;
+    }
+    70% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateX(-150px);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* menu */
+
+.placementMenu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.bAllContainerMenuNone {
+    display: none;
+}
+
+.bAllContainerMenuFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    position: relative;
+    background: #ecc380;
+    box-shadow: 6px 6px 5px #967541;
+    border-radius: 20px;
+    margin: 0px 20px;
+    width: 480px;
+    height: 670px;
+    opacity: 0;
+    animation: menu 300ms both;
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.bOneContainerChoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS',Arial;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    margin: 25px;
+    font-size: 1.8rem;
+    color:  black;
+}
+
+
+.bOneContainerCross {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #caa05c;
+    position: absolute;
+    cursor: pointer;
+    color: black;
+    border: 0px solid black;
+    border-radius: 100px;
+    width:30px;
+    height: 30px;
+    padding: 5px;
+    top: -1%;
+    left: 96%;
+}
+
+.journeyTxt {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    font-size: 0.9rem;
+}
+
+.whoAmI {
+    opacity: 0;
+}
+
+.whoAmI{
+    animation: menu 700ms ease-in-out 100ms 1 forwards;
+}
+
+.chronology {
+    animation: menu 700ms ease-in-out 650ms 1 forwards;
+}
+
+
+
+.whoAmI > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 17px;
+    margin-bottom: 25px;
+}
+.whoAmI > ul > li{
+    margin: -3px 18px;
+}
+
+.quincunx {
+    padding-right: 50px;
+}
+
+.chronology {
+    opacity: 0;
+    margin-top: 10px;
+}
+.chronology > ul {
+    margin-top: 17px;
+    margin-bottom: 25px;
+}
+
+.chronology > ul > li{
+    margin: 20px 18px;
+}
+
+
+.marginChrono {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.marginChrono > p {
+    margin: 2px 0px;
+}
+
+
+.contactTxt {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    font-size: 0.9rem;
+}
+
+.objective {
+    width: 100%;
+    margin-bottom: 25px;
+    opacity: 0;
+    
+}
+
+.objectiveAnim{
+    animation: menu 700ms ease-in-out 100ms 1 forwards;
+}
+
+.lookingForAnim {
+    animation: menu 700ms ease-in-out 650ms 1 forwards;
+}
+
+.contactMeAnim {
+    animation: menu 700ms ease-in-out 1200ms 1 forwards;
+}
+
+.objective > ul{
+ margin: 15px 18px;
+}
+
+.objective > ul > li {
+    margin: 18px;
+}
+
+
+
+
+
+/* footer */
+
+.borderFooterTop {
+    background-color: #ecc380;
+    width: 100%;
+    height: 8px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.containerFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(#ca615e 10%, #B24945);
+    color: black;
+    height: 90px;
+}
+
+.bOneContainerNext {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 20px;
+    font-family: 'Comic Sans MS',Arial;
+}
+
+.bOneContainerNext:hover {
+    transform: scale(1.15);
+    transition: transform 400ms;
+}
+
+.fa-arrow-right {
+    margin-left: 20px;
+}
+
+.fa-arrow-left {
+    margin-right: 20px;
+}
+
+.bAllContainerDot {
+    display: flex;
+    flex-direction: row;
+}
+
+.greenDot {
+    color: #ecc380;
+    transform: scale(1.5);
+    transition: transform 400ms;
+}
+
+.bOneContainerDot {
+    margin: 10px;
+}
