@@ -202,6 +202,21 @@ h3{
         opacity: 1;
     }
 }
+@keyframes showText2 {
+    0% {
+        visibility: visible;
+    }
+    70% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(310px);
+        opacity: 1;
+    }
+}
 
 
 
@@ -428,4 +443,140 @@ h3{
 
 .bOneContainerDot {
     margin: 10px;
+}
+
+
+@media (max-width: 1762px) 
+{
+    .active:hover .text-container{
+        animation: showText2 400ms 0s ease-in both;
+    }
+
+    .active:hover {
+        transform: translateX(0px) translateY(-200px);
+    }
+
+    .bAllContainerProject{
+        height: 850px ;
+    }
+    .text-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        left: 0px;
+        top: 100px;
+    }
+
+    .placementProject {
+        justify-content: center;
+        flex: 1;
+    }
+
+    .placementMenu {
+        flex: 0;
+    }
+}
+
+@media (max-width: 1350px) {
+    
+    .bAllContainerProject{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 850px;
+    }
+    .placementMenu {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .placementProject {
+        order: 2;
+    }
+
+    .bAllContainerMenuFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 680px;
+        margin: 20px 0px;
+    }
+
+    .active:hover {
+        transform: none;
+    }
+    .active {
+        margin-bottom: 10px;
+    }
+
+    .text-container {
+        display: none;
+    }
+} 
+
+@media (max-width: 830px) {
+    .image{
+        width: 600px;
+        height: 292px;
+    }
+}
+
+@media (max-width: 685px) {
+    .bOneContainerLogo{
+        font-size: 4rem;
+    }
+
+    .bOneContainerMenu{
+        font-size: 1.3rem;
+    }
+
+    .bOneContainerNext{
+        font-size: 1.3rem;
+    }
+
+    .bOneContainerDot{
+        font-size: 0.8rem;
+    }
+
+    .bAllContainerMenuFlex {
+        width: 350px;
+        height:600px;
+    }
+
+    .objective {
+        font-size: 0.76rem;
+        margin-bottom: 10px;
+    }
+    .objective > ul {
+        margin: 0px;
+    }
+
+    .journeyTxt {
+        font-size: 0.65rem;
+    }
+
+    .image{
+        width: 420px;
+        height: 203px;
+    }
+}
+
+@media (max-width: 620px){
+    .bOneContainerLogo{
+        font-size: 2.8rem;
+    }
+
+    .bOneContainerMenu{
+        font-size: 0.9rem;
+    }
+    .bOneContainerNext{
+        font-size: 0.9rem;
+    }
+    .bOneContainerDot{
+        font-size: 0.6rem;
+    }
 }
